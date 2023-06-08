@@ -55,13 +55,18 @@
         color: #555;
       }
 
-      .result-success {
-        color: #4caf50;
+      .result-fail {
+        color: #f44336;
         font-weight: bold;
       }
 
-      .result-fail {
-        color: #f44336;
+      .result-conditionally-pass {
+        color: #ffc107;
+        font-weight: bold;
+      }
+
+      .result-success {
+        color: #4caf50;
         font-weight: bold;
       }
     </style>
@@ -124,7 +129,7 @@
           result.classList.add("result-success");
           result.textContent += " - Başarılı";
         } else if (averageGrade >= 55) {
-          result.classList.add("result-fail");
+          result.classList.add("result-conditionally-pass");
           result.textContent += " - Şartlı Geçer";
         } else {
           result.classList.add("result-fail");
